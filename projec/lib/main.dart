@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 import 'package:flutter/services.dart';
 
 void main() {
@@ -23,8 +25,35 @@ const _accent   = Color(0xFF2563EB);
 
 // ── App ───────────────────────────────────────────────────────────────────────
 
-class App extends StatelessWidget {
+
+
+
+class App extends StatefulWidget {
   const App({super.key});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+
+  @override
+  void initState() {
+    super.initState();
+    getMsg();
+  }
+
+  Future<void> getMsg() async {
+    try {
+      final response = await http.get(
+        Uri.parse("http://127.0.0.1:8000/")
+      );
+      print("Status: ${response.statusCode}");
+      print("Body: ${response.body}");
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +62,10 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: _bg,
-        colorScheme: const ColorScheme.light(primary: _accent, surface: _surface),
+        colorScheme: const ColorScheme.light(
+          primary: _accent,
+          surface: _surface,
+        ),
         splashFactory: NoSplash.splashFactory,
         highlightColor: Colors.transparent,
       ),
@@ -41,7 +73,6 @@ class App extends StatelessWidget {
     );
   }
 }
-
 // ── Data ──────────────────────────────────────────────────────────────────────
 
 enum ResultKind { web, news, video }
