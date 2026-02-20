@@ -1,0 +1,84 @@
+{
+  "surgeons": [
+    {
+      "surgeon_id": "SURG001",
+      "name": "Dr. Arjun Mehta",
+      "age": 45,
+      "years_of_experience": 18,
+      "specialization": "Cardiothoracic Surgery",
+      "hospitals": [
+        {
+          "hospital_name": "SRM Hospital",
+          "working_days": ["Monday", "Tuesday"]
+        },
+        {
+          "hospital_name": "Kauvery Hospital",
+          "working_days": ["Wednesday", "Thursday"]
+        }
+      ],
+      "total_cases_handled": 2450,
+      "critical_cases_handled": 620,
+      "successful_cases": 2320,
+      "successful_critical_cases": 540,
+      "casualties": 130,
+      "overall_success_rate": 94.69,
+      "critical_success_rate": 87.10,
+      "average_surgery_time_minutes": 165,
+      "patient_satisfaction_score": 4.6,
+      "disciplinary_actions": 0,
+      "calculated_rating": 4.7
+    },
+    {
+      "surgeon_id": "SURG002",
+      "name": "Dr. Nisha Rao",
+      "age": 38,
+      "years_of_experience": 12,
+      "specialization": "Neurosurgery",
+      "hospitals": [
+        {
+          "hospital_name": "Apollo Hospital",
+          "working_days": ["Monday", "Friday"]
+        },
+        {
+          "hospital_name": "Fortis Healthcare",
+          "working_days": ["Tuesday", "Thursday"]
+        }
+      ],
+      "total_cases_handled": 1580,
+      "critical_cases_handled": 480,
+      "successful_cases": 1460,
+      "successful_critical_cases": 410,
+      "casualties": 120,
+      "overall_success_rate": 92.41,
+      "critical_success_rate": 85.42,
+      "average_surgery_time_minutes": 210,
+      "patient_satisfaction_score": 4.4,
+      "disciplinary_actions": 1,
+      "calculated_rating": 4.3
+    },
+    {
+      "surgeon_id": "SURG003",
+      "name": "Dr. Vikram Iyer",
+      "age": 52,
+      "years_of_experience": 25,
+      "specialization": "Orthopedic Surgery",
+      "hospitals": [
+        {
+          "hospital_name": "Global Health City",
+          "working_days": ["Monday", "Wednesday", "Friday"]
+        }
+      ],
+      "total_cases_handled": 3200,
+      "critical_cases_handled": 700,
+      "successful_cases": 3050,
+      "successful_critical_cases": 640,
+      "casualties": 150,
+      "overall_success_rate": 95.31,
+      "critical_success_rate": 91.42,
+      "average_surgery_time_minutes": 140,
+      "patient_satisfaction_score": 4.8,
+      "disciplinary_actions": 0,
+      "calculated_rating": 4.9
+    }
+  ]
+}
